@@ -11,7 +11,6 @@ import java.awt.Toolkit;
 import javax.swing.JPanel;
 
 
-///3qw;ekq qomfmS
 
 /**
  *
