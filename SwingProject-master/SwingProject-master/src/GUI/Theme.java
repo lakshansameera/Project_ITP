@@ -74,7 +74,7 @@ public class Theme extends javax.swing.JFrame {
         });
 
         financeImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        financeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Ratings_26px.png"))); // NOI18N
+        financeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Accounting_50px.png"))); // NOI18N
 
         financeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         financeLabel.setForeground(new java.awt.Color(204, 204, 204));
@@ -95,7 +95,7 @@ public class Theme extends javax.swing.JFrame {
         financePanelLayout.setVerticalGroup(
             financePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(financePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(financeImage, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addComponent(financeImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(financeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -110,7 +110,7 @@ public class Theme extends javax.swing.JFrame {
         finishedProductsLabel.setForeground(new java.awt.Color(204, 204, 204));
         finishedProductsLabel.setText("Finished Products");
 
-        finishedProductsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Clothes_50px.png"))); // NOI18N
+        finishedProductsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Shopping_Cart_50px.png"))); // NOI18N
         finishedProductsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout finishedProductsPanelLayout = new javax.swing.GroupLayout(finishedProductsPanel);
@@ -140,7 +140,7 @@ public class Theme extends javax.swing.JFrame {
         stockMaterialsLabel.setForeground(new java.awt.Color(204, 204, 204));
         stockMaterialsLabel.setText("Stock Materials");
 
-        stockMaterialsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Price_Tag_52px.png"))); // NOI18N
+        stockMaterialsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Box_50px.png"))); // NOI18N
         stockMaterialsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout stockMaterialsPanelLayout = new javax.swing.GroupLayout(stockMaterialsPanel);
@@ -170,7 +170,7 @@ public class Theme extends javax.swing.JFrame {
         qaLabel.setForeground(new java.awt.Color(204, 204, 204));
         qaLabel.setText("Quality Assurance ");
 
-        qaImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Good_Quality_52px.png"))); // NOI18N
+        qaImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Good_Quality_50px.png"))); // NOI18N
         qaImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout qaPanelLayout = new javax.swing.GroupLayout(qaPanel);
@@ -201,7 +201,7 @@ public class Theme extends javax.swing.JFrame {
         salesLabel.setText("Sales & Marketing");
 
         salesImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        salesImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Sales_Performance_26px.png"))); // NOI18N
+        salesImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Advertising_50px.png"))); // NOI18N
         salesImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout salesPanelLayout = new javax.swing.GroupLayout(salesPanel);
@@ -217,7 +217,7 @@ public class Theme extends javax.swing.JFrame {
         salesPanelLayout.setVerticalGroup(
             salesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(salesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(salesImage, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(salesImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         transportsPanel.setBackground(new java.awt.Color(85, 65, 118));
@@ -232,7 +232,7 @@ public class Theme extends javax.swing.JFrame {
         transportsLabel.setText("Transports");
 
         transportsImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        transportsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Transportation_26px.png"))); // NOI18N
+        transportsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Interstate_Truck_50px.png"))); // NOI18N
         transportsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout transportsPanelLayout = new javax.swing.GroupLayout(transportsPanel);
@@ -248,7 +248,7 @@ public class Theme extends javax.swing.JFrame {
         transportsPanelLayout.setVerticalGroup(
             transportsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(transportsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(transportsImage, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(transportsImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         returnsPanel.setBackground(new java.awt.Color(85, 65, 118));
@@ -263,7 +263,7 @@ public class Theme extends javax.swing.JFrame {
         returnsLabel.setText("Return Stock");
 
         returnsImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        returnsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Return_26px.png"))); // NOI18N
+        returnsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Return_50px.png"))); // NOI18N
         returnsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout returnsPanelLayout = new javax.swing.GroupLayout(returnsPanel);
@@ -279,7 +279,7 @@ public class Theme extends javax.swing.JFrame {
         returnsPanelLayout.setVerticalGroup(
             returnsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(returnsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(returnsImage, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(returnsImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         hrPanel.setBackground(new java.awt.Color(85, 65, 118));
@@ -294,7 +294,7 @@ public class Theme extends javax.swing.JFrame {
         hrLabel.setText("HR");
 
         hrImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hrImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Conference_26px.png"))); // NOI18N
+        hrImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Management_50px_2.png"))); // NOI18N
         hrImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout hrPanelLayout = new javax.swing.GroupLayout(hrPanel);
@@ -310,7 +310,7 @@ public class Theme extends javax.swing.JFrame {
         hrPanelLayout.setVerticalGroup(
             hrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hrLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(hrImage, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(hrImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
@@ -330,11 +330,11 @@ public class Theme extends javax.swing.JFrame {
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidePanelLayout.createSequentialGroup()
                 .addGap(70, 70, 70)
-                .addComponent(stockMaterialsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(stockMaterialsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(finishedProductsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(qaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(qaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(salesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)

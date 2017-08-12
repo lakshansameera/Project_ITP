@@ -85,11 +85,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                      <Component id="stockMaterialsPanel" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="stockMaterialsPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="finishedProductsPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="qaPanel" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="qaPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="salesPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -129,7 +129,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="financeImage" alignment="2" pref="50" max="32767" attributes="0"/>
+                          <Component id="financeImage" alignment="2" max="32767" attributes="0"/>
                           <Component id="financeLabel" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -140,7 +140,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Ratings_26px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Accounting_50px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -204,7 +204,7 @@
                 <Component class="javax.swing.JLabel" name="finishedProductsImage">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Clothes_50px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Shopping_Cart_50px.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
@@ -254,7 +254,7 @@
                 <Component class="javax.swing.JLabel" name="stockMaterialsImage">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Price_Tag_52px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Box_50px.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
@@ -304,7 +304,7 @@
                 <Component class="javax.swing.JLabel" name="qaImage">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Good_Quality_52px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Good_Quality_50px.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
@@ -335,7 +335,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="salesLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="salesImage" alignment="0" pref="50" max="32767" attributes="0"/>
+                      <Component id="salesImage" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -355,7 +355,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Sales_Performance_26px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Advertising_50px.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
@@ -386,7 +386,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="transportsLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="transportsImage" alignment="0" pref="50" max="32767" attributes="0"/>
+                      <Component id="transportsImage" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -406,7 +406,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Transportation_26px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Interstate_Truck_50px.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
@@ -437,7 +437,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="returnsLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="returnsImage" alignment="0" pref="50" max="32767" attributes="0"/>
+                      <Component id="returnsImage" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -457,7 +457,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Return_26px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Return_50px.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
@@ -488,7 +488,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="hrLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="hrImage" alignment="0" pref="50" max="32767" attributes="0"/>
+                      <Component id="hrImage" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -508,7 +508,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/icons8_Conference_26px.png"/>
+                      <Image iconType="3" name="/Images/icons8_Management_50px_2.png"/>
                     </Property>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
