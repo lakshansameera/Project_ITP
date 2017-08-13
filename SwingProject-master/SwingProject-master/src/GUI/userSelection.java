@@ -218,16 +218,11 @@ public class userSelection extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(userSelection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                userSelection mi = new userSelection();
-                 mi.setExtendedState(mi.MAXIMIZED_BOTH);
-                 mi.setVisible(true);
-                // mi.pack();
-//        mi.setVisible(true);
+                new userSelection().setVisible(true);
             }
         });
     }

@@ -6,7 +6,8 @@
 package Main;
 
 import GUI.Theme;
-import GUI.Welcome;
+import GUI.welcome;
+import java.awt.IllegalComponentStateException;
 
 /**
  *
@@ -19,8 +20,8 @@ public class Main {
      */
     public static void main(String[] args)
     {
-        Welcome wl = new Welcome();
-       wl.setExtendedState(Welcome.MAXIMIZED_BOTH);
+        welcome wl = new welcome();
+       wl.setExtendedState(welcome.MAXIMIZED_BOTH);
        wl.setVisible(true);
         
     }

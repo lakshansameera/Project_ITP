@@ -58,6 +58,7 @@ public class Theme extends javax.swing.JFrame {
         hrPanel = new javax.swing.JPanel();
         hrLabel = new javax.swing.JLabel();
         hrImage = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         themeImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -313,6 +314,16 @@ public class Theme extends javax.swing.JFrame {
             .addComponent(hrImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setText("Log out");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
         sidePanel.setLayout(sidePanelLayout);
         sidePanelLayout.setHorizontalGroup(
@@ -325,6 +336,9 @@ public class Theme extends javax.swing.JFrame {
             .addComponent(returnsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(financePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(hrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(sidePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2))
         );
         sidePanelLayout.setVerticalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,7 +358,10 @@ public class Theme extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(financePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(hrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(hrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(28, 28, 28))
         );
 
         themeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FirstInterface.jpg"))); // NOI18N
@@ -468,6 +485,14 @@ public class Theme extends javax.swing.JFrame {
         resetColor(qaPanel);
     }//GEN-LAST:event_hrPanelMousePressed
 
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+
+        loginScreen ls = new loginScreen();
+        ls.setExtendedState(loginScreen.MAXIMIZED_BOTH);
+        ls.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
     public void setColor(JPanel panel)
     {
         panel.setBackground(new Color(54,33,89));
@@ -538,6 +563,7 @@ public class Theme extends javax.swing.JFrame {
     private javax.swing.JLabel hrImage;
     private javax.swing.JLabel hrLabel;
     private javax.swing.JPanel hrPanel;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel qaImage;
     private javax.swing.JLabel qaLabel;
     private javax.swing.JPanel qaPanel;
