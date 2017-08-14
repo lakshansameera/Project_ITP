@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import GUI.Internal.DeliveryMain;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -59,7 +60,8 @@ public class Theme extends javax.swing.JFrame {
         hrLabel = new javax.swing.JLabel();
         hrImage = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        themeImage = new javax.swing.JLabel();
+        DesktopPane = new javax.swing.JDesktopPane();
+        backgroundImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -231,10 +233,20 @@ public class Theme extends javax.swing.JFrame {
         transportsLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         transportsLabel.setForeground(new java.awt.Color(204, 204, 204));
         transportsLabel.setText("Transports");
+        transportsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transportsLabelMouseClicked(evt);
+            }
+        });
 
         transportsImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         transportsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Interstate_Truck_50px.png"))); // NOI18N
         transportsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        transportsImage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transportsImageMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout transportsPanelLayout = new javax.swing.GroupLayout(transportsPanel);
         transportsPanel.setLayout(transportsPanelLayout);
@@ -364,7 +376,24 @@ public class Theme extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
         );
 
-        themeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FirstInterface.jpg"))); // NOI18N
+        DesktopPane.setBackground(new java.awt.Color(76, 77, 78));
+
+        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FirstInterface.jpg"))); // NOI18N
+
+        DesktopPane.setLayer(backgroundImage, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout DesktopPaneLayout = new javax.swing.GroupLayout(DesktopPane);
+        DesktopPane.setLayout(DesktopPaneLayout);
+        DesktopPaneLayout.setHorizontalGroup(
+            DesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DesktopPaneLayout.createSequentialGroup()
+                .addComponent(backgroundImage)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        DesktopPaneLayout.setVerticalGroup(
+            DesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(backgroundImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -372,13 +401,13 @@ public class Theme extends javax.swing.JFrame {
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(themeImage, javax.swing.GroupLayout.DEFAULT_SIZE, 1307, Short.MAX_VALUE))
+                .addGap(4, 4, 4)
+                .addComponent(DesktopPane))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(themeImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(DesktopPane)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -493,6 +522,16 @@ public class Theme extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
+    private void transportsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transportsLabelMouseClicked
+        DeliveryMain dl = new DeliveryMain();
+        DesktopPane.add(dl).setVisible(true);
+    }//GEN-LAST:event_transportsLabelMouseClicked
+
+    private void transportsImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transportsImageMouseClicked
+        DeliveryMain dl = new DeliveryMain();
+        DesktopPane.add(dl).setVisible(true);
+    }//GEN-LAST:event_transportsImageMouseClicked
+
     public void setColor(JPanel panel)
     {
         panel.setBackground(new Color(54,33,89));
@@ -553,7 +592,9 @@ public class Theme extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane DesktopPane;
     private javax.swing.JPanel background;
+    private javax.swing.JLabel backgroundImage;
     private javax.swing.JLabel financeImage;
     private javax.swing.JLabel financeLabel;
     private javax.swing.JPanel financePanel;
@@ -577,7 +618,6 @@ public class Theme extends javax.swing.JFrame {
     private javax.swing.JLabel stockMaterialsImage;
     private javax.swing.JLabel stockMaterialsLabel;
     private javax.swing.JPanel stockMaterialsPanel;
-    private javax.swing.JLabel themeImage;
     private javax.swing.JLabel transportsImage;
     private javax.swing.JLabel transportsLabel;
     private javax.swing.JPanel transportsPanel;
