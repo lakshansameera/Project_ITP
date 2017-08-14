@@ -35,32 +35,23 @@ public class Theme extends javax.swing.JFrame {
 
         background = new javax.swing.JPanel();
         sidePanel = new javax.swing.JPanel();
+        stockPanel = new javax.swing.JPanel();
+        stockLabel = new javax.swing.JLabel();
+        stockImage = new javax.swing.JLabel();
+        productionPanel = new javax.swing.JPanel();
+        productionLabel = new javax.swing.JLabel();
+        productionImage = new javax.swing.JLabel();
         financePanel = new javax.swing.JPanel();
-        financeImage = new javax.swing.JLabel();
         financeLabel = new javax.swing.JLabel();
-        finishedProductsPanel = new javax.swing.JPanel();
-        finishedProductsLabel = new javax.swing.JLabel();
-        finishedProductsImage = new javax.swing.JLabel();
-        stockMaterialsPanel = new javax.swing.JPanel();
-        stockMaterialsLabel = new javax.swing.JLabel();
-        stockMaterialsImage = new javax.swing.JLabel();
-        qaPanel = new javax.swing.JPanel();
-        qaLabel = new javax.swing.JLabel();
-        qaImage = new javax.swing.JLabel();
+        financeImage = new javax.swing.JLabel();
         salesPanel = new javax.swing.JPanel();
         salesLabel = new javax.swing.JLabel();
         salesImage = new javax.swing.JLabel();
-        transportsPanel = new javax.swing.JPanel();
-        transportsLabel = new javax.swing.JLabel();
-        transportsImage = new javax.swing.JLabel();
-        returnsPanel = new javax.swing.JPanel();
-        returnsLabel = new javax.swing.JLabel();
-        returnsImage = new javax.swing.JLabel();
         hrPanel = new javax.swing.JPanel();
         hrLabel = new javax.swing.JLabel();
         hrImage = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        DesktopPane = new javax.swing.JDesktopPane();
+        salesDesktopPane = new javax.swing.JDesktopPane();
         backgroundImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,6 +60,66 @@ public class Theme extends javax.swing.JFrame {
 
         sidePanel.setBackground(new java.awt.Color(54, 33, 89));
 
+        stockPanel.setBackground(new java.awt.Color(85, 65, 118));
+        stockPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                stockPanelMousePressed(evt);
+            }
+        });
+
+        stockLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        stockLabel.setForeground(new java.awt.Color(204, 204, 204));
+        stockLabel.setText("Stock Management");
+
+        stockImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Shopping_Cart_50px.png"))); // NOI18N
+        stockImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout stockPanelLayout = new javax.swing.GroupLayout(stockPanel);
+        stockPanel.setLayout(stockPanelLayout);
+        stockPanelLayout.setHorizontalGroup(
+            stockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(stockPanelLayout.createSequentialGroup()
+                .addComponent(stockImage)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(stockLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        stockPanelLayout.setVerticalGroup(
+            stockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(stockLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(stockImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        productionPanel.setBackground(new java.awt.Color(85, 65, 118));
+        productionPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                productionPanelMousePressed(evt);
+            }
+        });
+
+        productionLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        productionLabel.setForeground(new java.awt.Color(204, 204, 204));
+        productionLabel.setText("Production Management");
+
+        productionImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Good_Quality_50px.png"))); // NOI18N
+        productionImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout productionPanelLayout = new javax.swing.GroupLayout(productionPanel);
+        productionPanel.setLayout(productionPanelLayout);
+        productionPanelLayout.setHorizontalGroup(
+            productionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productionPanelLayout.createSequentialGroup()
+                .addComponent(productionImage, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        productionPanelLayout.setVerticalGroup(
+            productionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(productionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(productionImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         financePanel.setBackground(new java.awt.Color(85, 65, 118));
         financePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -76,120 +127,28 @@ public class Theme extends javax.swing.JFrame {
             }
         });
 
-        financeImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        financeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Accounting_50px.png"))); // NOI18N
-
         financeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         financeLabel.setForeground(new java.awt.Color(204, 204, 204));
-        financeLabel.setText("Finance Department");
-        financeLabel.setName(""); // NOI18N
-        financeLabel.setPreferredSize(new java.awt.Dimension(71, 20));
+        financeLabel.setText("Finance Management");
+
+        financeImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        financeImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Advertising_50px.png"))); // NOI18N
+        financeImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout financePanelLayout = new javax.swing.GroupLayout(financePanel);
         financePanel.setLayout(financePanelLayout);
         financePanelLayout.setHorizontalGroup(
             financePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(financePanelLayout.createSequentialGroup()
-                .addComponent(financeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(financeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(financeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(financeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         financePanelLayout.setVerticalGroup(
             financePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(financePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(financeImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(financeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        finishedProductsPanel.setBackground(new java.awt.Color(85, 65, 118));
-        finishedProductsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                finishedProductsPanelMousePressed(evt);
-            }
-        });
-
-        finishedProductsLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        finishedProductsLabel.setForeground(new java.awt.Color(204, 204, 204));
-        finishedProductsLabel.setText("Finished Products");
-
-        finishedProductsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Shopping_Cart_50px.png"))); // NOI18N
-        finishedProductsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout finishedProductsPanelLayout = new javax.swing.GroupLayout(finishedProductsPanel);
-        finishedProductsPanel.setLayout(finishedProductsPanelLayout);
-        finishedProductsPanelLayout.setHorizontalGroup(
-            finishedProductsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(finishedProductsPanelLayout.createSequentialGroup()
-                .addComponent(finishedProductsImage)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(finishedProductsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        finishedProductsPanelLayout.setVerticalGroup(
-            finishedProductsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(finishedProductsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(finishedProductsImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        stockMaterialsPanel.setBackground(new java.awt.Color(85, 65, 118));
-        stockMaterialsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                stockMaterialsPanelMousePressed(evt);
-            }
-        });
-
-        stockMaterialsLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        stockMaterialsLabel.setForeground(new java.awt.Color(204, 204, 204));
-        stockMaterialsLabel.setText("Stock Materials");
-
-        stockMaterialsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Box_50px.png"))); // NOI18N
-        stockMaterialsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout stockMaterialsPanelLayout = new javax.swing.GroupLayout(stockMaterialsPanel);
-        stockMaterialsPanel.setLayout(stockMaterialsPanelLayout);
-        stockMaterialsPanelLayout.setHorizontalGroup(
-            stockMaterialsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(stockMaterialsPanelLayout.createSequentialGroup()
-                .addComponent(stockMaterialsImage)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(stockMaterialsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        stockMaterialsPanelLayout.setVerticalGroup(
-            stockMaterialsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(stockMaterialsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(stockMaterialsImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        qaPanel.setBackground(new java.awt.Color(85, 65, 118));
-        qaPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                qaPanelMousePressed(evt);
-            }
-        });
-
-        qaLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        qaLabel.setForeground(new java.awt.Color(204, 204, 204));
-        qaLabel.setText("Quality Assurance ");
-
-        qaImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Good_Quality_50px.png"))); // NOI18N
-        qaImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout qaPanelLayout = new javax.swing.GroupLayout(qaPanel);
-        qaPanel.setLayout(qaPanelLayout);
-        qaPanelLayout.setHorizontalGroup(
-            qaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(qaPanelLayout.createSequentialGroup()
-                .addComponent(qaImage, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(qaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        qaPanelLayout.setVerticalGroup(
-            qaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(qaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(qaImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(financeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(financeImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         salesPanel.setBackground(new java.awt.Color(85, 65, 118));
@@ -201,98 +160,36 @@ public class Theme extends javax.swing.JFrame {
 
         salesLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         salesLabel.setForeground(new java.awt.Color(204, 204, 204));
-        salesLabel.setText("Sales & Marketing");
+        salesLabel.setText("Sales and Marketing");
+        salesLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salesLabelMouseClicked(evt);
+            }
+        });
 
         salesImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        salesImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Advertising_50px.png"))); // NOI18N
+        salesImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Interstate_Truck_50px.png"))); // NOI18N
         salesImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        salesImage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salesImageMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout salesPanelLayout = new javax.swing.GroupLayout(salesPanel);
         salesPanel.setLayout(salesPanelLayout);
         salesPanelLayout.setHorizontalGroup(
             salesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(salesPanelLayout.createSequentialGroup()
-                .addComponent(salesImage, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(salesImage, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(salesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(salesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
         salesPanelLayout.setVerticalGroup(
             salesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(salesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(salesImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        transportsPanel.setBackground(new java.awt.Color(85, 65, 118));
-        transportsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                transportsPanelMousePressed(evt);
-            }
-        });
-
-        transportsLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        transportsLabel.setForeground(new java.awt.Color(204, 204, 204));
-        transportsLabel.setText("Transports");
-        transportsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                transportsLabelMouseClicked(evt);
-            }
-        });
-
-        transportsImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        transportsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Interstate_Truck_50px.png"))); // NOI18N
-        transportsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        transportsImage.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                transportsImageMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout transportsPanelLayout = new javax.swing.GroupLayout(transportsPanel);
-        transportsPanel.setLayout(transportsPanelLayout);
-        transportsPanelLayout.setHorizontalGroup(
-            transportsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transportsPanelLayout.createSequentialGroup()
-                .addComponent(transportsImage, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(transportsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-        transportsPanelLayout.setVerticalGroup(
-            transportsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(transportsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(transportsImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        returnsPanel.setBackground(new java.awt.Color(85, 65, 118));
-        returnsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                returnsPanelMousePressed(evt);
-            }
-        });
-
-        returnsLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        returnsLabel.setForeground(new java.awt.Color(204, 204, 204));
-        returnsLabel.setText("Return Stock");
-
-        returnsImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        returnsImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Return_50px.png"))); // NOI18N
-        returnsImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout returnsPanelLayout = new javax.swing.GroupLayout(returnsPanel);
-        returnsPanel.setLayout(returnsPanelLayout);
-        returnsPanelLayout.setHorizontalGroup(
-            returnsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(returnsPanelLayout.createSequentialGroup()
-                .addComponent(returnsImage, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(returnsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-        returnsPanelLayout.setVerticalGroup(
-            returnsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(returnsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(returnsImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         hrPanel.setBackground(new java.awt.Color(85, 65, 118));
@@ -304,10 +201,10 @@ public class Theme extends javax.swing.JFrame {
 
         hrLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         hrLabel.setForeground(new java.awt.Color(204, 204, 204));
-        hrLabel.setText("HR");
+        hrLabel.setText("Human Resource");
 
         hrImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hrImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Management_50px_2.png"))); // NOI18N
+        hrImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Return_50px.png"))); // NOI18N
         hrImage.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout hrPanelLayout = new javax.swing.GroupLayout(hrPanel);
@@ -315,9 +212,9 @@ public class Theme extends javax.swing.JFrame {
         hrPanelLayout.setHorizontalGroup(
             hrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hrPanelLayout.createSequentialGroup()
-                .addComponent(hrImage, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hrImage, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(hrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
         hrPanelLayout.setVerticalGroup(
@@ -340,35 +237,29 @@ public class Theme extends javax.swing.JFrame {
         sidePanel.setLayout(sidePanelLayout);
         sidePanelLayout.setHorizontalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(stockMaterialsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(finishedProductsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(qaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(salesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(transportsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(returnsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(financePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(hrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2))
+                .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(stockPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(productionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(financePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(salesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(sidePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)))
+                .addGap(17, 17, 17))
         );
         sidePanelLayout.setVerticalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(stockMaterialsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(120, 120, 120)
+                .addComponent(stockPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(finishedProductsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(qaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(salesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(transportsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(returnsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(productionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(financePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(salesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(hrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -376,22 +267,22 @@ public class Theme extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
         );
 
-        DesktopPane.setBackground(new java.awt.Color(76, 77, 78));
+        salesDesktopPane.setBackground(new java.awt.Color(76, 77, 78));
 
         backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FirstInterface.jpg"))); // NOI18N
 
-        DesktopPane.setLayer(backgroundImage, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        salesDesktopPane.setLayer(backgroundImage, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout DesktopPaneLayout = new javax.swing.GroupLayout(DesktopPane);
-        DesktopPane.setLayout(DesktopPaneLayout);
-        DesktopPaneLayout.setHorizontalGroup(
-            DesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DesktopPaneLayout.createSequentialGroup()
+        javax.swing.GroupLayout salesDesktopPaneLayout = new javax.swing.GroupLayout(salesDesktopPane);
+        salesDesktopPane.setLayout(salesDesktopPaneLayout);
+        salesDesktopPaneLayout.setHorizontalGroup(
+            salesDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(salesDesktopPaneLayout.createSequentialGroup()
                 .addComponent(backgroundImage)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        DesktopPaneLayout.setVerticalGroup(
-            DesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        salesDesktopPaneLayout.setVerticalGroup(
+            salesDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(backgroundImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -402,12 +293,12 @@ public class Theme extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(DesktopPane))
+                .addComponent(salesDesktopPane))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(DesktopPane)
+            .addComponent(salesDesktopPane)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -426,92 +317,55 @@ public class Theme extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void stockMaterialsPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockMaterialsPanelMousePressed
-        setColor(stockMaterialsPanel);
-        resetColor(finishedProductsPanel);
+    private void stockPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockPanelMousePressed
+        setColor(stockPanel);
+        resetColor(financePanel);
         resetColor(salesPanel);
-        resetColor(transportsPanel);
-        resetColor(returnsPanel);
-        resetColor(financePanel);
         resetColor(hrPanel);
-        resetColor(qaPanel);
-    }//GEN-LAST:event_stockMaterialsPanelMousePressed
+        resetColor(productionPanel);
+        
+        
+    }//GEN-LAST:event_stockPanelMousePressed
 
-    private void finishedProductsPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finishedProductsPanelMousePressed
-        setColor(finishedProductsPanel);
-        resetColor(stockMaterialsPanel);
+    private void productionPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productionPanelMousePressed
+        setColor(productionPanel);
+        resetColor(financePanel);
         resetColor(salesPanel);
-        resetColor(transportsPanel);
-        resetColor(returnsPanel);
-        resetColor(financePanel);
         resetColor(hrPanel);
-        resetColor(qaPanel);
-    }//GEN-LAST:event_finishedProductsPanelMousePressed
-
-    private void qaPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaPanelMousePressed
-        setColor(qaPanel);
-        resetColor(stockMaterialsPanel);
-        resetColor(salesPanel);
-        resetColor(transportsPanel);
-        resetColor(returnsPanel);
-        resetColor(financePanel);
-        resetColor(hrPanel);
-        resetColor(finishedProductsPanel);
-    }//GEN-LAST:event_qaPanelMousePressed
-
-    private void salesPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salesPanelMousePressed
-        setColor(salesPanel);
-        resetColor(stockMaterialsPanel);
-        resetColor(finishedProductsPanel);
-        resetColor(transportsPanel);
-        resetColor(returnsPanel);
-        resetColor(financePanel);
-        resetColor(hrPanel);
-        resetColor(qaPanel);
-    }//GEN-LAST:event_salesPanelMousePressed
-
-    private void transportsPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transportsPanelMousePressed
-       setColor(transportsPanel);
-        resetColor(stockMaterialsPanel);
-        resetColor(salesPanel);
-        resetColor(finishedProductsPanel);
-        resetColor(returnsPanel);
-        resetColor(financePanel);
-        resetColor(hrPanel);
-        resetColor(qaPanel);
-    }//GEN-LAST:event_transportsPanelMousePressed
-
-    private void returnsPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnsPanelMousePressed
-       setColor(returnsPanel);
-        resetColor(stockMaterialsPanel);
-        resetColor(salesPanel);
-        resetColor(transportsPanel);
-        resetColor(finishedProductsPanel);
-        resetColor(financePanel);
-        resetColor(hrPanel);
-        resetColor(qaPanel);
-    }//GEN-LAST:event_returnsPanelMousePressed
+        resetColor(stockPanel);
+        
+        
+    }//GEN-LAST:event_productionPanelMousePressed
 
     private void financePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_financePanelMousePressed
         setColor(financePanel);
-        resetColor(stockMaterialsPanel);
+        resetColor(stockPanel);
         resetColor(salesPanel);
-        resetColor(transportsPanel);
-        resetColor(returnsPanel);
-        resetColor(finishedProductsPanel);
         resetColor(hrPanel);
-        resetColor(qaPanel);
+        resetColor(productionPanel);
+        
+        
     }//GEN-LAST:event_financePanelMousePressed
+
+    private void salesPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salesPanelMousePressed
+        setColor(salesPanel);
+        resetColor(financePanel);
+        resetColor(stockPanel);
+        resetColor(hrPanel);
+        resetColor(productionPanel);
+        
+        DeliveryMain dl = new DeliveryMain();
+        salesDesktopPane.add(dl).setVisible(true);
+    }//GEN-LAST:event_salesPanelMousePressed
 
     private void hrPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hrPanelMousePressed
         setColor(hrPanel);
-        resetColor(stockMaterialsPanel);
-        resetColor(salesPanel);
-        resetColor(transportsPanel);
-        resetColor(returnsPanel);
         resetColor(financePanel);
-        resetColor(finishedProductsPanel);
-        resetColor(qaPanel);
+        resetColor(salesPanel);
+        resetColor(stockPanel);
+        resetColor(productionPanel);
+        
+        
     }//GEN-LAST:event_hrPanelMousePressed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -522,15 +376,20 @@ public class Theme extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void transportsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transportsLabelMouseClicked
+    private void salesLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salesLabelMouseClicked
         DeliveryMain dl = new DeliveryMain();
-        DesktopPane.add(dl).setVisible(true);
-    }//GEN-LAST:event_transportsLabelMouseClicked
+        salesDesktopPane.add(dl).setVisible(true);
+        setColor(salesPanel);
+        resetColor(financePanel);
+        resetColor(hrPanel);
+        resetColor(stockPanel);
+        resetColor(productionPanel);
+    }//GEN-LAST:event_salesLabelMouseClicked
 
-    private void transportsImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transportsImageMouseClicked
+    private void salesImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salesImageMouseClicked
         DeliveryMain dl = new DeliveryMain();
-        DesktopPane.add(dl).setVisible(true);
-    }//GEN-LAST:event_transportsImageMouseClicked
+        salesDesktopPane.add(dl).setVisible(true);
+    }//GEN-LAST:event_salesImageMouseClicked
 
     public void setColor(JPanel panel)
     {
@@ -592,34 +451,25 @@ public class Theme extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane DesktopPane;
     private javax.swing.JPanel background;
     private javax.swing.JLabel backgroundImage;
     private javax.swing.JLabel financeImage;
     private javax.swing.JLabel financeLabel;
     private javax.swing.JPanel financePanel;
-    private javax.swing.JLabel finishedProductsImage;
-    private javax.swing.JLabel finishedProductsLabel;
-    private javax.swing.JPanel finishedProductsPanel;
     private javax.swing.JLabel hrImage;
     private javax.swing.JLabel hrLabel;
     private javax.swing.JPanel hrPanel;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel qaImage;
-    private javax.swing.JLabel qaLabel;
-    private javax.swing.JPanel qaPanel;
-    private javax.swing.JLabel returnsImage;
-    private javax.swing.JLabel returnsLabel;
-    private javax.swing.JPanel returnsPanel;
+    private javax.swing.JLabel productionImage;
+    private javax.swing.JLabel productionLabel;
+    private javax.swing.JPanel productionPanel;
+    private javax.swing.JDesktopPane salesDesktopPane;
     private javax.swing.JLabel salesImage;
     private javax.swing.JLabel salesLabel;
     private javax.swing.JPanel salesPanel;
     private javax.swing.JPanel sidePanel;
-    private javax.swing.JLabel stockMaterialsImage;
-    private javax.swing.JLabel stockMaterialsLabel;
-    private javax.swing.JPanel stockMaterialsPanel;
-    private javax.swing.JLabel transportsImage;
-    private javax.swing.JLabel transportsLabel;
-    private javax.swing.JPanel transportsPanel;
+    private javax.swing.JLabel stockImage;
+    private javax.swing.JLabel stockLabel;
+    private javax.swing.JPanel stockPanel;
     // End of variables declaration//GEN-END:variables
 }
